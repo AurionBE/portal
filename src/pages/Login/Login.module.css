@@ -4,29 +4,33 @@
 	align-items: center;
 	width: 100vw;
 	height: 100vh;
-	animation: fadeIn 1s ease-in-out;
 }
 
 .loginWrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	width: 100%;
-	max-width: 900px;
+	max-width: 56.25rem;
 	background-color: rgba(36, 36, 36, 0.7);
-	border-radius: 20px;
+	border-radius: 1.25rem;
 	overflow: hidden;
 	border: 1px solid var(--border-color);
-	backdrop-filter: blur(10px);
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(0.625rem);
+	box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(20px);
+@media (max-width: 48rem) {
+	.loginContainer {
+		padding: 1.25rem;
 	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
+
+	.loginWrapper {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 100%;
+		max-width: 25rem;
+		height: auto;
+		border-radius: 1.25rem;
+		overflow: hidden;
 	}
 }

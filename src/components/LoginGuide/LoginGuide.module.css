@@ -1,24 +1,24 @@
 .guideContainer {
-	padding: 40px;
+	padding: 2.5rem;
 	background-color: rgba(255, 255, 255, 0.05);
 	border-right: 1px solid rgba(255, 255, 255, 0.1);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
 }
 
 .guideContainer h1 {
 	font-size: 2rem;
 	color: var(--primary-orange);
 	margin-top: 0;
-	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
 	line-height: 1.2;
 }
 
 .guideContainer h2 {
 	font-size: 0.9rem;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 0.125rem;
 	color: var(--text-secondary);
 	margin: 0;
 }
@@ -30,7 +30,7 @@
 
 .footer {
 	margin-top: auto;
-	padding-top: 20px;
+	padding-top: 1.25rem;
 }
 
 .supportText {
@@ -42,8 +42,8 @@
 .socialsContainer {
 	display: flex;
 	justify-content: center;
-	gap: 15px;
-	margin-top: 15px;
+	gap: 0.9375rem;
+	margin-top: 0.9375rem;
 }
 
 .socialButton {
@@ -55,4 +55,21 @@
 .socialButton:hover {
 	color: var(--primary-orange);
 	transform: scale(1.1);
+}
+
+@media (max-width: 48rem) {
+	.guideContainer {
+		padding: 1.25rem; /* Уменьшаем отступы */
+		border-right: none;
+		text-align: center;
+		background-color: rgba(255, 255, 255, 0.02); /* Делаем фон почти прозрачным */
+	}
+
+	.guideContainer h1 {
+		font-size: 1.2rem; /* Уменьшаем шрифт заголовка */
+	}
+
+	.footer {
+		margin-top: 0.9375rem;
+	}
 }
