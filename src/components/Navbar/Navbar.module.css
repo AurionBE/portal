@@ -9,8 +9,68 @@
 	padding: 1rem 2rem;
 	background-color: rgba(26, 26, 26, 0.5);
 	backdrop-filter: blur(10px);
-	border-bottom: 1px solid var(--border-color);
 	z-index: 1000;
+	border-bottom: 2px solid var(--border-color);
+	transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.navbar::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	pointer-events: none;
+	transition: opacity 0.5s ease;
+	opacity: 0;
+}
+
+.online {
+	border-bottom-color: #28a745;
+}
+.online::before {
+	opacity: 1;
+	background: radial-gradient(ellipse at top, rgba(40, 167, 69, 0.2) 0%, transparent 70%);
+}
+
+.offline {
+	border-bottom-color: #6c757d;
+}
+
+.hard {
+	border-bottom-color: #ffc107;
+}
+.hard::before {
+	opacity: 1;
+	background: radial-gradient(ellipse at top, rgba(255, 193, 7, 0.2) 0%, transparent 70%);
+}
+
+.attacked {
+	border-bottom-color: #dc3545;
+	animation: siren-border 1s infinite alternate;
+}
+.attacked::before {
+	opacity: 1;
+	background: radial-gradient(ellipse at top, rgba(220, 53, 69, 0.3) 0%, transparent 70%);
+	animation: siren-glow 1s infinite alternate;
+}
+
+@keyframes siren-border {
+	from { border-bottom-color: #dc3545; }
+	to { border-bottom-color: #ff4d4d; }
+}
+
+@keyframes siren-glow {
+	from { opacity: 0.5; }
+	to { opacity: 1; }
+}
+
+
+.leftSection {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
 }
 
 .logo {
@@ -35,16 +95,21 @@
 	margin-top: 2px;
 }
 
-.loginIcon {
-	color: var(--text-primary);
-	font-size: 1.8rem;
+.loginButton {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	transition: color 0.3s ease, transform 0.3s ease;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--primary-orange);
+	color: var(--primary-orange);
+	background-color: transparent;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
-.loginIcon:hover {
-	color: var(--primary-orange);
-	transform: scale(1.1);
+.loginButton:hover {
+	background-color: var(--primary-orange);
+	color: var(--text-primary);
+	transform: scale(1.05);
 }

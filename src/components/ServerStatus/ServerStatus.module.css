@@ -1,0 +1,110 @@
+.serverInfo {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 0.8rem;
+	color: var(--text-secondary);
+}
+
+.statusDetails {
+	display: flex;
+	flex-direction: column;
+}
+
+.status {
+	font-weight: bold;
+	font-size: 0.85rem;
+	white-space: nowrap;
+}
+
+.online .status {
+	color: #28a745;
+}
+
+.offline .status {
+	color: #6c757d;
+}
+
+.attacked .status {
+	color: #dc3545;
+	font-size: 0.9rem;
+}
+
+.hard .status {
+	color: #ffc107;
+}
+
+.pulsatingDot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #6c757d;
+	animation: pulse 2s infinite;
+	flex-shrink: 0;
+	align-self: center;
+}
+
+.online .pulsatingDot {
+	background-color: #28a745;
+	animation-name: pulse-online;
+}
+
+.offline .pulsatingDot {
+	background-color: #6c757d;
+	animation: none;
+}
+
+.attacked .pulsatingDot {
+	background-color: #dc3545;
+	animation-name: pulse-attacked;
+	animation-duration: 0.5s;
+}
+
+.hard .pulsatingDot {
+	background-color: #ffc107;
+	animation-name: pulse-hard;
+}
+
+.onlineCount {
+	font-size: 0.75rem;
+}
+.onlineCount span {
+	font-weight: 500;
+}
+
+
+@keyframes pulse-online {
+	0% {
+		box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 8px rgba(40, 167, 69, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+	}
+}
+
+@keyframes pulse-attacked {
+	0% {
+		box-shadow: 0 0 0 0 rgba(220, 53, 69, 1);
+	}
+	70% {
+		box-shadow: 0 0 0 8px rgba(220, 53, 69, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+	}
+}
+
+@keyframes pulse-hard {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 8px rgba(255, 193, 7, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+	}
+}
