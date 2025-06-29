@@ -1,0 +1,132 @@
+.formContainer {
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: var(--bg-light-dark);
+}
+
+.formContainer h2 {
+	font-size: 1.8rem;
+	margin-top: 0;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.inputGroup {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.labelWrapper {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.labelWrapper label {
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+	margin-right: 8px;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-flex;
+}
+
+.tooltipIcon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #555;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: help;
+	user-select: none;
+}
+
+.tooltipText {
+	visibility: hidden;
+	width: 220px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -110px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltipText::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #333 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltipText {
+	visibility: visible;
+	opacity: 1;
+}
+
+.inputGroup input {
+	background-color: var(--bg-dark);
+	border: 1px solid var(--border-color);
+	color: var(--text-primary);
+	padding: 12px 15px;
+	border-radius: 8px;
+	font-size: 1rem;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputGroup input:focus {
+	outline: none;
+	border-color: var(--primary-orange);
+	box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.3);
+}
+
+.submitButton {
+	width: 100%;
+	padding: 15px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: var(--text-primary);
+	background-color: var(--primary-orange);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+	margin-top: 10px;
+}
+
+.submitButton:hover {
+	background-color: var(--dark-orange);
+	transform: translateY(-2px);
+}
+
+.submitButton:active {
+	transform: translateY(0);
+}
+
+.errorText {
+	color: #ff4d4d;
+	font-size: 0.9rem;
+	text-align: center;
+	min-height: 1.2em;
+	margin-bottom: 10px;
+}
