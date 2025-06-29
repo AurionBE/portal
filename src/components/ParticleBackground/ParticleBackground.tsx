@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, memo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { type Container, type ISourceOptions } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticleBackground = () => {
+const ParticleBackgroundComponent = () => {
 	const [init, setInit] = useState(false);
 
 	useEffect(() => {
@@ -106,4 +106,4 @@ const ParticleBackground = () => {
 	return <></>;
 };
 
-export default ParticleBackground;
+export default memo(ParticleBackgroundComponent);

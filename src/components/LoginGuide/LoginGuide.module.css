@@ -59,14 +59,18 @@
 
 @media (max-width: 48rem) {
 	.guideContainer {
-		padding: 1.25rem; /* Уменьшаем отступы */
+		padding: 1.25rem;
 		border-right: none;
 		text-align: center;
-		background-color: rgba(255, 255, 255, 0.02); /* Делаем фон почти прозрачным */
+		background-color: rgba(255, 255, 255, 0.02);
 	}
 
 	.guideContainer h1 {
-		font-size: 1.2rem; /* Уменьшаем шрифт заголовка */
+		font-size: 1.2rem;
+	}
+
+	.guideContainer h2 {
+		display: none;
 	}
 
 	.footer {

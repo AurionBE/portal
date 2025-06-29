@@ -1,0 +1,43 @@
+.title {
+	font-size: 3rem;
+	font-weight: 700;
+	margin: 0;
+	line-height: 1.2;
+}
+
+.animatedText {
+	color: var(--primary-orange);
+	min-height: 4rem;
+	display: inline-block;
+}
+
+.cursor {
+	display: inline-block;
+	width: 2px;
+	height: 3rem;
+	background-color: var(--primary-orange);
+	margin-left: 8px;
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 2rem;
+	}
+
+	.cursor {
+		height: 2rem;
+	}
+}

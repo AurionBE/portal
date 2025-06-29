@@ -4,12 +4,12 @@ import { FaDiscord, FaTelegramPlane, FaVk } from 'react-icons/fa';
 const LoginGuide = () => {
 	return (
 		<div className={styles.guideContainer}>
-			<h2>AURION PORTAL</h2>
+			<h2>AURION - Зал забвения</h2>
 			<h1>ВАШ АККАУНТ В ВАШИХ РУКАХ, ДАЖЕ ВНЕ ИГРЫ</h1>
 			<p className={styles.description}>
 				Управляйте своими сессиями, следите за своей статистикой, блокируйте
 				неизвестные устройства, изменяйте данные, кастомизируйте свой
-				профиль и так далее. Всё это в Aurion Portal.
+				профиль и так далее. Всё это в Зале забвения.
 			</p>
 			<div className={styles.footer}>
 				<p className={styles.supportText}>
